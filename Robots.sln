@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Robots.CSharp.Plugins", "Robots.CSharp.Plugins.csproj", "{E0150D7E-41E2-08BA-C482-D45DC6A73B1A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Robots.CSharp", "Robots.CSharp.csproj", "{F2D415B1-D551-420F-32D0-B2EDC2C3C75D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Robots.CSharp.Editor", "Robots.CSharp.Editor.csproj", "{EEE6DF24-961D-55EA-3C08-704F911BEBC2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E0150D7E-41E2-08BA-C482-D45DC6A73B1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0150D7E-41E2-08BA-C482-D45DC6A73B1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0150D7E-41E2-08BA-C482-D45DC6A73B1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0150D7E-41E2-08BA-C482-D45DC6A73B1A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2D415B1-D551-420F-32D0-B2EDC2C3C75D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2D415B1-D551-420F-32D0-B2EDC2C3C75D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2D415B1-D551-420F-32D0-B2EDC2C3C75D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2D415B1-D551-420F-32D0-B2EDC2C3C75D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EEE6DF24-961D-55EA-3C08-704F911BEBC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEE6DF24-961D-55EA-3C08-704F911BEBC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEE6DF24-961D-55EA-3C08-704F911BEBC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEE6DF24-961D-55EA-3C08-704F911BEBC2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
