@@ -2,9 +2,24 @@
 using System.Collections;
 
 public class Player : MonoBehaviour {
-    public float movementSpeed = 10;
-    public float turningSpeed = 60;
- 
+    public float movementSpeed = 500;
+    public float turningSpeed = 120;
+    public Rigidbody rb;
+    public bool onGround;
+
+    void Start() {
+        rb = GetComponent<Rigidbody>();
+    }
+
+    void OnCollisionStay (Collision collisionInfo) {onGround = true;}
+    void OnCollisionExit (Collision collisionInfo) {onGround = false;}
+
+    void FixedUpdate() {
+        if ((onGround == true) && (Input.GetButtonDown("Jump"))) {
+            rb.velocity = new Vector3(0, 15, 0);
+        }
+    }
+
     void Update() {
         float horizontal = Input.GetAxis("Horizontal") * turningSpeed * Time.deltaTime;
         transform.Rotate(0, horizontal, 0);
@@ -14,6 +29,7 @@ public class Player : MonoBehaviour {
 
         if(Input.GetKey("j")) {
             transform.Translate(0, 1, 0);
+            rb.velocity = new Vector3(0, 0, 0);
         }
     }
 }
