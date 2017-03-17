@@ -22,23 +22,29 @@ public class Player : MonoBehaviour {
     }
 
     void OnCollisionStay (Collision collisionInfo) {onGround = true;}
+
     void OnCollisionExit (Collision collisionInfo) {onGround = false;}
 
     void FixedUpdate() {
-        if ((onGround == true) && (Input.GetButtonDown("Jump"))) {
-            rb.velocity = new Vector3(0, 15, 0);
+        if (onGround == true) {
+            if (Input.GetButtonDown("Jump")) {
+                rb.AddForce(new Vector3(0, 150, 0), ForceMode.Impulse);
+            }
         }
     }
 
      void OnTriggerEnter(Collider collider) {
-        if (collider.name.Equals("Trigger"))
-        { 
+        if (collider.name.Equals("Trigger")) { 
             back.SetActive(true);
             text.SetActive(true);
             line.SetActive(true);
             timer = 120;
         } else if (collider.name.Equals("BoundingBox")) {
-            transform.position = checkpoint;
+            if((!Input.GetKey("k")) && ((onGround) || (rb.velocity.y > 0))) {
+                transform.position = checkpoint;
+            } else {
+                collider.gameObject.transform.parent.position = new Vector3(100, 100, 100);
+            }
         } else if (collider.name.Equals("Bullet")) {
             transform.position = checkpoint;
         } else {
