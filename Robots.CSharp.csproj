@@ -85,6 +85,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\MoveTowardsPlayer.cs" />
+    <Compile Include="Assets\Shooting.cs" />
     <Compile Include="Assets\Text Trigger.cs" />
     <Compile Include="Assets\UnityVS\FollowCamera.cs" />
     <Compile Include="Assets\UnityVS\LookAtCamera.cs" />

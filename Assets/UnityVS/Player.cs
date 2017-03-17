@@ -38,7 +38,16 @@ public class Player : MonoBehaviour {
             line.SetActive(true);
             timer = 120;
         } else if (collider.name.Equals("BoundingBox")) {
-            transform.position = checkpoint;      
+            transform.position = checkpoint;
+        } else if (collider.name.Equals("Bullet")) {
+            transform.position = checkpoint;
+        } else {
+            for(int i = 0; (i < 100); ++i) {
+                if(collider.name.Equals("Checkpoint (" + i + ")")) {
+                    checkpoint = transform.position;
+                    break;
+                }
+            }
         }
     }
 
@@ -52,10 +61,6 @@ public class Player : MonoBehaviour {
         if(Input.GetKey("j")) {
             transform.Translate(0, 1, 0);
             rb.velocity = new Vector3(0, 0, 0);
-        }
-            
-        if (onGround) {
-            checkpoint = transform.position;
         }
         
         if(timer > 0) {
