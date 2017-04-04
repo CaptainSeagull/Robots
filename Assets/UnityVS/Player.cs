@@ -34,7 +34,9 @@ public class Player : MonoBehaviour {
     }
 
      void OnTriggerEnter(Collider collider) {
-        if (collider.name.Equals("Trigger")) { 
+        if (collider.name.Equals("end")) {
+            Application.LoadLevel("end");
+        } else if (collider.name.Equals("Trigger")) { 
             back.SetActive(true);
             text.SetActive(true);
             line.SetActive(true);
@@ -45,7 +47,7 @@ public class Player : MonoBehaviour {
             } else {
                 collider.gameObject.transform.parent.position = new Vector3(100, 100, 100);
             }
-        } else if (collider.name.Equals("Bullet")) {
+        } else if (collider.name.Equals("Bullet") || collider.name.Equals("Lava")) {
             transform.position = checkpoint;
         } else {
             for(int i = 0; (i < 100); ++i) {
