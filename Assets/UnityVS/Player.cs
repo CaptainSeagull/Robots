@@ -7,6 +7,7 @@ public class Player : MonoBehaviour {
     public GameObject back;
     public GameObject text;
     public GameObject line;
+    public GameObject fire;
     public Rigidbody rb;
     public bool onGround;
     Vector3 checkpoint;
@@ -60,6 +61,15 @@ public class Player : MonoBehaviour {
     }
 
     void Update() {
+        if(onGround == true)
+        {
+            fire.transform.position = new Vector3(1000, 1000, 1000);
+        }
+        else
+        {
+            fire.transform.position = transform.position;
+        }
+
         float horizontal = Input.GetAxis("Horizontal") * turningSpeed * Time.deltaTime;
         transform.Rotate(0, horizontal, 0);
          
