@@ -1,8 +1,9 @@
 ﻿<Properties StartupItem="Robots.CSharp.Plugins.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\UnityVS\Player.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\SpaceToQuit.cs">
     <Files>
       <File FileName="Assets\UnityVS\Player.cs" Line="1" Column="1" />
+      <File FileName="Assets\SpaceToQuit.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
